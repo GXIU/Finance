@@ -1,0 +1,586 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\use_default_options true
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "STSong"
+\font_sans "default" "STHeiti"
+\font_typewriter "default" "STFangsong"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+衍生证券基础第二次作业
+\end_layout
+
+\begin_layout Author
+1400010647 修格致
+\end_layout
+
+\begin_layout Date
+2017-2-27
+\end_layout
+
+\begin_layout Subsubsection
+假设：
+\begin_inset Formula $S$
+\end_inset
+
+在
+\begin_inset Formula $t_{d}\in(t,T)$
+\end_inset
+
+派发股息
+\begin_inset Formula $D\text{>0}$
+\end_inset
+
+，其他时间无股息派发。证明
+\begin_inset Formula $For(S,t,T)=S(t)e^{r(T-t)}-De^{r(T-t_{d})}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+证明：
+\end_layout
+
+\begin_layout Standard
+由于无套利原则，远期合约的价格应该满足：这个投资组合在
+\begin_inset Formula $T$
+\end_inset
+
+时刻的价值为
+\begin_inset Formula $S(T)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset Formula $(t_{d},T)$
+\end_inset
+
+之中，买方只持有期权一种资产，所以
+\begin_inset Formula $t_{d}$
+\end_inset
+
+时刻的价值应该为
+\begin_inset Formula $S(t_{d}^{+})-For(S,t,T)e^{-r(T-t_{d})}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $t_{d}^{-}$
+\end_inset
+
+时刻，由于
+\begin_inset Formula $S(t_{d}^{-})=S(t_{d}^{+})+D$
+\end_inset
+
+，期权的价值等于股息与
+\begin_inset Formula $S(t_{d}^{+})$
+\end_inset
+
+之和，即
+\begin_inset Formula $f=S(t_{d}^{-})-For(S,t,T)e^{-r(T-t_{d})}+D$
+\end_inset
+
+.
+ 此时期权的等价资产为一支股票和一笔现金。对资产的时间价值进行换算，
+\begin_inset Formula $t_{d}$
+\end_inset
+
+时刻
+\begin_inset Formula $S(t_{d}^{-})$
+\end_inset
+
+的那只股票在
+\begin_inset Formula $T$
+\end_inset
+
+时刻价格为
+\begin_inset Formula $S(T)$
+\end_inset
+
+；
+\begin_inset Formula $D$
+\end_inset
+
+的现金贴现到
+\begin_inset Formula $T$
+\end_inset
+
+时刻价值为
+\begin_inset Formula $De^{r(T-t_{d})}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+即
+\begin_inset Formula $For(S,t,T)$
+\end_inset
+
+加上一笔现金
+\begin_inset Formula $De^{r(T-t_{d})}$
+\end_inset
+
+等价于最初时刻的一支股票的价值
+\begin_inset Formula $S(t)$
+\end_inset
+
+.
+ 证毕
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula $S$
+\end_inset
+
+在
+\begin_inset Formula $[t,T]$
+\end_inset
+
+连续派发股息，股息派发率为
+\begin_inset Formula $q$
+\end_inset
+
+。证明
+\begin_inset Formula $For(S,t,T)=S(t)e^{(r-q)(T-t)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+证明：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $t$
+\end_inset
+
+时刻
+\begin_inset Formula $e^{-q(A)}$
+\end_inset
+
+单位的资产，在
+\begin_inset Formula $t+A$
+\end_inset
+
+时刻价值为
+\begin_inset Formula $S(t+A)$
+\end_inset
+
+。所以此远期合约的价格为
+\begin_inset Formula $T$
+\end_inset
+
+时刻上，
+\begin_inset Formula $t$
+\end_inset
+
+时刻
+\begin_inset Formula $e^{q(A)}$
+\end_inset
+
+单位资产的价值。即
+\begin_inset Formula $t+A=T,A=T-t$
+\end_inset
+
+。
+\begin_inset Formula $T$
+\end_inset
+
+时刻会有
+\begin_inset Formula $e^{-qA}e^{qA}=1$
+\end_inset
+
+只价格为
+\begin_inset Formula $For(S,t,T)$
+\end_inset
+
+的股票，相当于
+\begin_inset Formula $e^{-q(T-t)}$
+\end_inset
+
+只价格为
+\begin_inset Formula $e^{q(T-t)}For(S,t,T)$
+\end_inset
+
+的股票
+\begin_inset Formula $\Pi$
+\end_inset
+
+。即
+\begin_inset Formula $For(S,t,T)=e^{-q(T-t)}For(\Pi,t,T)=e^{-q(T-t)}S(t)e^{r(T-t)}$
+\end_inset
+
+ 得证
+\end_layout
+
+\begin_layout Subsubsection
+假设
+\begin_inset Formula $S$
+\end_inset
+
+无股息派发，
+\begin_inset Formula $A$
+\end_inset
+
+在
+\begin_inset Formula $t$
+\end_inset
+
+时向
+\begin_inset Formula $B$
+\end_inset
+
+买入一张远期合约，价格为
+\begin_inset Formula $For(S,t,T)$
+\end_inset
+
+.
+ 在
+\begin_inset Formula $t$
+\end_inset
+
+时，双方无现金流，
+\begin_inset Formula $t_{1}$
+\end_inset
+
+时，
+\begin_inset Formula $A$
+\end_inset
+
+打算转手给
+\begin_inset Formula $X$
+\end_inset
+
+，求此时
+\begin_inset Formula $X$
+\end_inset
+
+要付给
+\begin_inset Formula $A$
+\end_inset
+
+多少现金？
+\end_layout
+
+\begin_layout Standard
+　　设
+\begin_inset Formula $For(S,t,T)=S(t)e^{r(T-t)}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $t_{1}$
+\end_inset
+
+时刻期权的价格为
+\begin_inset Formula $For(S,t_{1},T)=S(t_{1})e^{r(T-t_{1})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以付出的金钱为
+\begin_inset Formula $[For(S,t_{1},T)-For(S,t,T)]e^{-r(T-t_{1})}=S(t_{1})-S(t)e^{r(t_{1}-t)}=S(t_{1})-For(S,t,T)e^{-r(T-t_{1})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+题目
+\end_layout
+
+\begin_layout Standard
+解：设
+\begin_inset Formula $t_{n}=T-2n\text{(minutes)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如题设定价，更换到期日，
+\begin_inset Formula $For_{n}(S,t,T)=S(t)e^{r(T-t_{n})}$
+\end_inset
+
+.
+ 新的价格应为
+\begin_inset Formula $For'(S,t,T)=S(t)[\sum_{i=1}^{60}e^{r(T-t_{n})}]/60$
+\end_inset
+
+。则
+\begin_inset Formula $t\ll T$
+\end_inset
+
+时显然有所证成立。
+\end_layout
+
+\begin_layout Standard
+几何平均：
+\begin_inset Formula 
+\begin{align*}
+For''(S,t,T) & =S(t)[\prod_{i=1}^{60}e^{r(T-t_{n})}]^{1/60}=S(t)[e^{r(60T-\sum_{i=1}^{60}t_{n})}]^{1/60}\\
+ & =S(t)e^{rT}(\prod_{i=1}^{60}e^{-rt_{n}})^{1/60}\text{≤}S(t)e^{rT}(\frac{1}{60}\sum_{i=1}^{60}e^{-t_{n}})=For'(S,t,T)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+算数平均比较大
+\end_layout
+
+\begin_layout Subsubsection
+(1)
+\end_layout
+
+\begin_layout Subparagraph
+\begin_inset Formula $For(S,t,T)=S(t)e^{r(T-t)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+令
+\begin_inset Formula $t_{n}=T,t_{0}=t$
+\end_inset
+
+, 有
+\end_layout
+
+\begin_layout Subparagraph
+\begin_inset Formula $\Pi(t)=\sum_{i=0}^{n}\{e^{r(T-t_{i+1})}[Fut(S,t_{i+1},T)-Fut(S,t_{i},T)]\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=e^{rT}\sum_{i=0}^{n}e^{-rt_{i+1}}[Fut(S,t_{i+1},T)-Fut(S,t_{i},T)]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\sum_{i=0}^{n-1}Fut(S,t_{i},T)[e^{rT-rt_{i}}-e^{rT-rt_{i+1}}]+Fut(S,t_{n},T)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=(e^{r}-1)\{\sum_{i=0}^{n-1}Fut(S,t_{i},T)[e^{rT-rt_{i+1}}]\}+S(T)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果我们在 
+\begin_inset Formula $t$
+\end_inset
+
+时再卖出 一张远期合约, 其价格为 
+\begin_inset Formula $For(S,t,T)$
+\end_inset
+
+.
+ 远期合约在卖出时也没有费用, 但到
+\begin_inset Formula $T$
+\end_inset
+
+ 时, 远期合约要求我们必须支付
+\begin_inset Formula $S(T)−For(S,t,T)$
+\end_inset
+
+给远期合约的买方.
+ 所以在
+\begin_inset Formula $t$
+\end_inset
+
+ 时, 买入一张期货合约同时卖出一张远期合约并且一直持有这两个合约到
+\begin_inset Formula $T$
+\end_inset
+
+ , 我们获得现金
+\begin_inset Formula 
+\[
+S(T)−Fut(S,t,T)−(S(T)−For(S,t,T))=For(S,t,T)−Fut(S,t,T)
+\]
+
+\end_inset
+
+.
+ 上式等号右面两项在
+\begin_inset Formula $t$
+\end_inset
+
+是已知的.
+ 由无套利假定，并对
+\begin_inset Formula $n$
+\end_inset
+
+进行归纳假设可证得
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $For(S,t,T)=Fut(S,t,T).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+(2)如果股息连续派发 ，则等式不会成立。
+\end_layout
+
+\begin_layout Standard
+假设成立，在
+\begin_inset Formula $t$
+\end_inset
+
+时刻卖出一张远期合约，
+\begin_inset Formula $t_{i}$
+\end_inset
+
+时刻买入
+\begin_inset Formula $e^{-r(T-t_{i+1})}$
+\end_inset
+
+份期货合约，并在
+\begin_inset Formula $t_{i+1}$
+\end_inset
+
+卖出。
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $[t_{i},t_{i+1}]$
+\end_inset
+
+上无股息派发，此交易收获现金
+\begin_inset Formula $e^{-r(T-t_{i+1})}(Fut(S,t_{i+1},T)-Fut(S,t,T))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+若有股息派发
+\begin_inset Formula $D_{i}$
+\end_inset
+
+：
+\begin_inset Formula $e^{-r(T-t_{i+1})}(Fut(S,t_{i+1},T)-Fut(S,t,T)+D_{i})$
+\end_inset
+
+.
+ 所以时刻
+\begin_inset Formula $T$
+\end_inset
+
+的:
+\end_layout
+
+\begin_layout Paragraph
+　　期货合约总现金为
+\begin_inset Formula $\sum_{i=0}^{n-1}\delta_{i}D_{i}-Fut(S,t,T)+S(T)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+　　远期合约收获现金
+\begin_inset Formula $For(S,t,T)-S(T)$
+\end_inset
+
+.
+ 此时总资产为
+\begin_inset Formula $\Sigma_{i=0}^{n-1}\delta_{i}b_{i}>0$
+\end_inset
+
+, 存在套利风险。所以不能如此定价。即等式不成立。
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,628 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\use_default_options true
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "STSong"
+\font_sans "default" "STHeiti"
+\font_typewriter "default" "STFangsong"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+衍生证券基础第三次作业
+\end_layout
+
+\begin_layout Author
+1400010647 修格致
+\end_layout
+
+\begin_layout Enumerate
+(2017-3-6.1).
+ 给定常数
+\begin_inset Formula $E_{1}≥E_{2}>0,$
+\end_inset
+
+ 证明:
+\begin_inset Formula $v(S,t,E_{1},T)$
+\end_inset
+
+
+\begin_inset Formula $≤v(S,t,E_{2},T)$
+\end_inset
+
+, 
+\begin_inset Formula $∀v∈\{c,C\}$
+\end_inset
+
+ 
+\begin_inset Formula $v(S,t,E_{1},T)≥v(S,t,E_{2},T)$
+\end_inset
+
+, 
+\begin_inset Formula $\forall v∈\{p,P\}.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $v=c$
+\end_inset
+
+时，证明：若
+\begin_inset Formula $c(S,t,E_{1},T)>c(S,t,E_{2},T)$
+\end_inset
+
+，则存在
+\begin_inset Formula $\epsilon>0,c(S,t,E_{1},T)>\epsilon+c(S,t,E_{2},T)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+由利益最大化原则，一定能找到一个买家A达成协议。以价格
+\begin_inset Formula $c(S,t,E_{1},T)-\epsilon$
+\end_inset
+
+的价格卖出一份敲定价格为
+\begin_inset Formula $E_{1}$
+\end_inset
+
+的看涨期权合约。同时我们再从B买入一份敲定价格为
+\begin_inset Formula $E_{2}$
+\end_inset
+
+的
+\begin_inset Formula $c(S,t,E_{2},T)$
+\end_inset
+
+。将剩余的
+\begin_inset Formula $c(S,t,E_{1},T)-c(S,t,E_{2},T)$
+\end_inset
+
+存入银行。在
+\begin_inset Formula $T$
+\end_inset
+
+时刻，两份合约到期，同时执行，得到现金：
+\begin_inset Formula $E_{1}-E_{2}$
+\end_inset
+
+，从B拿到一股S并给予A。从而得到套利。
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+所以
+\begin_inset Formula $c(S,t,E_{1},T)$
+\end_inset
+
+
+\begin_inset Formula $≤c(S,t,E_{2},T)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $v=\mathbb{C}$
+\end_inset
+
+时，若
+\begin_inset Formula $\mathbb{C}(S,t,E_{1},T)>\mathbb{C}(S,t,E_{2},T)$
+\end_inset
+
+，则存在
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+，
+\begin_inset Formula $\mathbb{C}(S,t,E_{1},T)>\epsilon+\mathbb{C}(S,t,E_{2},T)$
+\end_inset
+
+。与
+\begin_inset Formula $v=c$
+\end_inset
+
+类似，只需要我们将作为卖方的期权被执行的同时，执行我们作为买方的期权即可。
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v=p$
+\end_inset
+
+时，若
+\begin_inset Formula $p(S,t,E_{1},T)<p(S,t,E_{2},T)$
+\end_inset
+
+，则
+\begin_inset Formula $\exists\epsilon,p(S,t,E_{1},T)+\epsilon<p(S,t,E_{2},T)$
+\end_inset
+
+。以
+\begin_inset Formula $p(S,t,E_{2},T)-\epsilon/2$
+\end_inset
+
+卖出一份敲定价格为
+\begin_inset Formula $E_{2}$
+\end_inset
+
+的期权，买入一份
+\begin_inset Formula $E_{1}-$
+\end_inset
+
+期权，将剩余的钱存入银行。
+\begin_inset Formula $T$
+\end_inset
+
+时刻执行两份合约，至少收入
+\begin_inset Formula $e^{r(T-t)}(p(S,t,E_{2},T)-\epsilon/2-p(S,t,E_{2},T))>e^{r(T-t)}\epsilon/2$
+\end_inset
+
+元。所以套利存在。
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v=P$
+\end_inset
+
+时，将上一问的操作中，
+\begin_inset Formula $T$
+\end_inset
+
+时刻换成任意
+\begin_inset Formula $\tau\in(t,T]$
+\end_inset
+
+，即可得证。
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(2017-3-6.2).
+ 给定
+\begin_inset Formula $s,k≥0$
+\end_inset
+
+.
+ 证明: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $F(\hat{S},ks,t,T)=kF(\hat{S},s,t,T)$
+\end_inset
+
+, (在
+\begin_inset Formula $t$
+\end_inset
+
+前预判)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $v(\hat{kS},kS,t,kE,T)=kv(S,t,E,T)$
+\end_inset
+
+, 
+\begin_inset Formula $\forall v∈$
+\end_inset
+
+{
+\begin_inset Formula $c,p,C,P$
+\end_inset
+
+} 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $v(\hat{S},ks,t,kE,T)$
+\end_inset
+
+ 
+\begin_inset Formula $=kv(\hat{S},s,t,E,T)$
+\end_inset
+
+, (在t前预判),
+\begin_inset Formula $\forall$
+\end_inset
+
+v ∈ {c,p,C,P}.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F(\hat{S},ks,t,T)=kF(\hat{S},s,t,T)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+左边的意义为：标的为1股
+\begin_inset Formula $S$
+\end_inset
+
+的远期合约的价格。
+\end_layout
+
+\begin_layout Itemize
+假设
+\begin_inset Formula $S$
+\end_inset
+
+无股息派发，
+\begin_inset Formula $F(\hat{S},s,t,T)=S(t)e^{r(T-t)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+假设
+\begin_inset Formula $S$
+\end_inset
+
+连续派发股息，
+\begin_inset Formula $F(\hat{S},s,t,T)=S(t)e^{(r-q)(T-t)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+假设离散股息派发，
+\begin_inset Formula $F(\hat{S},ks,t,T)=S(t)e^{r(T-t)}-De^{r(T-t_{d})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以我们在
+\begin_inset Formula $t$
+\end_inset
+
+时刻，股价为s和ks时，将其带入
+\begin_inset Formula $S(t)$
+\end_inset
+
+.
+ 则均有命题成立。
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+对于
+\begin_inset Formula $\hat{kS}$
+\end_inset
+
+我们可以看做将k只股票S捆在一起的新股票。则它在t时刻股价为
+\begin_inset Formula $kS$
+\end_inset
+
+，敲定价格为
+\begin_inset Formula $kE$
+\end_inset
+
+，所以有
+\begin_inset Formula $v(\hat{kS},kS,t,kE,T)=kv(\hat{S,}S,t,E,T)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+我们还要证明如果这个得不到满足，就存在套利机会。
+\end_layout
+
+\begin_layout Standard
+如果等于号变成不等号，则买入小于的一侧，马上以大于的一侧卖出，即可得到套利。
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+考虑计价单位的变化：针对标的
+\begin_inset Formula $\hat{S}$
+\end_inset
+
+，考虑买入k份期权。则等式左边相当于
+\begin_inset Formula $t$
+\end_inset
+
+时的股票数作为计价单位，并且设其为
+\begin_inset Formula $ks$
+\end_inset
+
+。右边相当于k份如下合约：计价单位为k只股票，
+\begin_inset Formula $1/k$
+\end_inset
+
+份这样的期权，每份在t时刻的价格为
+\begin_inset Formula $v(\hat{S},s,t,E,T)$
+\end_inset
+
+。则右边可以对应与左边同样的现金流和合约流。即等号成立。
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(2017-3-6.3)期权的凸性：给定常数 
+\begin_inset Formula $λ$
+\end_inset
+
+ ∈ [0, 1], 对于
+\begin_inset Formula $v$
+\end_inset
+
+ ∈ {
+\begin_inset Formula $c,p,C,P$
+\end_inset
+
+}, 证明对于
+\begin_inset Formula $\hat{S}$
+\end_inset
+
+，有
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $v(S,t,λE_{1}+(1−λ)E_{2},T)$
+\end_inset
+
+ ≤
+\begin_inset Formula $λv(S,t,E_{1},T)$
+\end_inset
+
+ + 
+\begin_inset Formula $(1−λ)v(S,t,E_{2},T)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $v(λS_{1}+(1−λ)S_{2},t,E,T)$
+\end_inset
+
+ ≤ 
+\begin_inset Formula $λv(S_{1},t,E,T)+(1−λ)v(S_{2},t,E,T)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+由于不会计算，我只考虑了不提前执行的情况。
+\end_layout
+
+\begin_layout Standard
+对于(a), 
+\begin_inset Formula $v$
+\end_inset
+
+时，若“
+\begin_inset Formula $>$
+\end_inset
+
+”成立，则我们能证明，可以套利。卖空1份左边的期权得到
+\begin_inset Formula $v(S,t,λE_{1}+(1\text{−}λ)E_{2},T)$
+\end_inset
+
+，再以敲定价格
+\begin_inset Formula $E_{1}$
+\end_inset
+
+和
+\begin_inset Formula $E_{2}$
+\end_inset
+
+买入
+\begin_inset Formula $\lambda$
+\end_inset
+
+股和
+\begin_inset Formula $1-\lambda$
+\end_inset
+
+股右边的期权。再将剩余的钱
+\begin_inset Formula $v(S,t,λE_{1}+(1\text{−}λ)E_{2},T)-λv(S,t,E_{1},T)-(1\text{−}λ)v(S,t,E_{2},T)$
+\end_inset
+
+存入银行。在到期时，同时执行三个期权，则套利存在。所以‘>’不可能成立。
+\end_layout
+
+\begin_layout Standard
+对于(b)，表述为：固定敲定价格，对于两种不同标的的线性组合，组合的价值小于单独一种按组合比例分配的价值。
+\end_layout
+
+\begin_layout Standard
+若“
+\begin_inset Formula $>$
+\end_inset
+
+”成立，则我们能证明，可以套利。卖空左面的线性组合，按比例买入敲定价为
+\begin_inset Formula $E$
+\end_inset
+
+的右边的。再执行时刻同时执行三种期权，即可得到套利。
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+作业题4(2017-3-6.4).假设: S只在
+\begin_inset Formula $t_{d}$
+\end_inset
+
+ ∈(t,T)派发股息,其派发额为
+\begin_inset Formula $D>0$
+\end_inset
+
+,我 们以前讲过一个假定: 一个投资组合的价值关于时间是连续变化的.
+ 如果一个投资组合Π(t) 含有期权
+\begin_inset Formula $v$
+\end_inset
+
+ ∈ {
+\begin_inset Formula $c,p,C,P$
+\end_inset
+
+}, 那么除了时间 
+\begin_inset Formula $t_{d}$
+\end_inset
+
+, 
+\begin_inset Formula $S$
+\end_inset
+
+ 关于时间连续。此时
+\begin_inset Formula $Π(t)$
+\end_inset
+
+的连续性比较自然。然而在股息派发前后一瞬间股价
+\begin_inset Formula $S$
+\end_inset
+
+不连续,此时Π(t)在
+\begin_inset Formula $t=t_{d}$
+\end_inset
+
+的连续性需要证明才能保证投资组合的价值随时间连续性假定是自恰的.。证明: 
+\begin_inset Formula $c(\hat{S},S,t_{d}^{-},E,T)=c(\hat{S},S,t_{d}^{+},E,T)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+若在
+\begin_inset Formula $t_{d}^{-}$
+\end_inset
+
+买入期权，则对应于这样一个现金流：
+\begin_inset Formula $t_{d}^{-}$
+\end_inset
+
+时刻给卖方
+\begin_inset Formula $c(\hat{S},S,t_{d}^{-},E,T)$
+\end_inset
+
+元，买入一份期权（此时股价为
+\begin_inset Formula $S(t_{d}^{-})$
+\end_inset
+
+），
+\begin_inset Formula $T$
+\end_inset
+
+时刻，卖方返还
+\begin_inset Formula $max\{S(T)-E\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+我们看出，在
+\begin_inset Formula $T$
+\end_inset
+
+时刻之前，期权对应的股票的所属权并没有发生变化，而股息只会发放给股票的所有人。即期权交易的卖方。所以期权的价值与期间股息的发放是独立的，而只与
+\begin_inset Formula $S(T)$
+\end_inset
+
+与
+\begin_inset Formula $E$
+\end_inset
+
+有关系（不考虑利率的情况下）。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\therefore c(\hat{S},S,t_{d}^{-},E,T)=c(\hat{S},S,t_{d}^{+},E,T)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

@@ -1,0 +1,402 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Deriva Gem：期权计算器，应用工具。
+\end_layout
+
+\begin_layout Section
+引言
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+衍生产品 某种更为基本的变量派生出来的产品。标的变量往往是某种交易资产的价格。交易所市场中，人们交易的往往是交易所标准化之后的衍生产品。
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+实物期权 对资本投资估算时，对项目进行分析和估值。
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+将至合约
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+看涨／跌期权 到某价格卖出／买入
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+交易所市场 由清算中心负责完成具体交易手续（不用考虑对手信用），有保证金。
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+场外市场 参与者：银行等 基金经理 大公司；中央交易对手CCP／双边清算
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+场外市场加强监管的目的 改善透明度，改善市场有效性，降低系统风险
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+互换交易执行场所SEF
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+登记中心
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+电子交易市场 算法交易／高频交易
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+雷曼破产 高杠杆 高风险 流动性问题
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+系统风险 
+\begin_inset Formula $ $
+\end_inset
+
+一家金融机构宣布破产时，他所产生的连锁反应会导致其他金融机构破产，从而威胁整个金融系统的稳定性。
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+远期合约 在将来某一指定时刻以约定价格交易某种产品的合约
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+多头寸／空头寸 买入方／卖出方
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+期货期权市场
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+做市商 金融机构，随时提供买入卖出价格
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+交易员 对冲者（用衍生品减少风险）、投机者（下赌注）、套利者（多个相互抵消的交易来套利）
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+对冲基金 不受监管条约的限制：公布投资方针，基金份额随时可以兑现，限制适用杠杆效应等。复杂 有独特见解的投资策略。有收费
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+基金式基金 在对冲基金的组合上进行投资
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+衍生产品作用：对冲风险，投资，套利。
+\end_layout
+
+\begin_layout Standard
+利用
+\bar under
+证券化
+\bar default
+(第八章)过程，市场参与者可以从美国市场汇总具有较大风险的按揭组合派生出新的衍生产品。由于信用危机，衍生产品市场收到了比过去更加严格的监管。例如：银行需要对自己
+承担的风险设定更多的本金，同时也需要投入更多经历去管理流动性。
+\end_layout
+
+\begin_layout Standard
+许多银行都将代表“无风险”的利率改成了反映其融资费用的利率。
+\end_layout
+
+\begin_layout Subsection
+远期
+\end_layout
+
+\begin_layout Subparagraph
+远期合约的收益
+\end_layout
+
+\begin_layout Enumerate
+远期合约的价值。
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+对于多头方来说每单位合约收益为
+\begin_inset Formula $S_{T}-K$
+\end_inset
+
+; K是交割价格，S是到期时的市场价值。
+\end_layout
+
+\begin_layout Enumerate
+对于空头方来说：
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $K-S_{T}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+远期价格与即期价格
+\end_layout
+
+\begin_layout Enumerate
+无利息：
+\begin_inset Formula $S(t)(1+r)^{T-t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+期货合约：将来某一指定时刻以约定价格买入或卖出某一产品的合约。
+\end_layout
+
+\begin_layout Enumerate
+在交易所进行(有标准化过程)
+\end_layout
+
+\begin_layout Enumerate
+并不知道交易对手
+\end_layout
+
+\begin_layout Enumerate
+金融媒体会定期公布期货价格定期。该价格由供需关系决定。
+\end_layout
+
+\begin_layout Enumerate
+期权价格之规定到期是期货价格满足
+\begin_inset Formula $Fut(S,T,T)=S(T)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+期货交易：
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+期货的交割：现金交割、实物交割、cost of carry
+\end_layout
+
+\begin_layout Enumerate
+期货交易通常有涨停板限制
+\end_layout
+
+\begin_layout Enumerate
+期货交易所不能亏损！
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+期货的
+\series bold
+杠杆作用！！！
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+明的杠杆
+\end_layout
+
+\begin_layout Enumerate
+隐形杠杆（与期货无关）
+\end_layout
+
+\begin_layout Enumerate
+期货的价值发现
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+期权合约：交易所市场和场外都有交易
+\end_layout
+
+\begin_layout Enumerate
+在将来某个时间，以特定的价格（执行价格），买入或者卖出某种资产（是一种权利，而不是义务）
+\end_layout
+
+\begin_layout Enumerate
+分类：看涨期权、看跌期权（买、卖）／美式期权、欧式期权（美式期权的性质常常与相应的欧式期权性质一样）
+\end_layout
+
+\begin_layout Enumerate
+一份合约的标的资产数量通常为100股。
+\end_layout
+
+\begin_layout Enumerate
+期权的买入-卖出差价（作为价格的百分比）通常比标的股票差别要大，且与交易量有关。
+\end_layout
+
+\begin_layout Enumerate
+参与者：4种。多头、空头
+\end_layout
+
+\begin_layout Enumerate
+卖出期权称为期权承约？？？
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对冲基金
+\end_layout
+
+\begin_layout Standard
+`
+\end_layout
+
+\begin_layout Standard
+`
+\end_layout
+
+\begin_layout Standard
+远期的价格与价值：股息派发之后，马上还银行，剩下的的就是价值。
+\end_layout
+
+\begin_layout Standard
+远期合约的交割
+\end_layout
+
+\begin_layout Standard
+跌停板？
+\end_layout
+
+\begin_layout Standard
+期货滑
+\end_layout
+
+\begin_layout Standard
+现货滞涩
+\end_layout
+
+\end_body
+\end_document

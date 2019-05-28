@@ -1,0 +1,224 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\use_default_options true
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Songti SC"
+\font_sans "default" "Heiti SC"
+\font_typewriter "default" "FangSong"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 2cm
+\headsep 2cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Formula $ds/s=\mu dt+\sigma dB$
+\end_inset
+
+（*）
+\end_layout
+
+\begin_layout Standard
+假定
+\begin_inset Formula $s$
+\end_inset
+
+无股息派发, 
+\begin_inset Formula $\mu,\sigma$
+\end_inset
+
+为常数
+\end_layout
+
+\begin_layout Standard
+若（*）满足，则称
+\begin_inset Formula $S$
+\end_inset
+
+服从几何布朗运动（GBM）
+\end_layout
+
+\begin_layout Standard
+关于
+\begin_inset Formula $\sigma$
+\end_inset
+
+讨论，1）若
+\begin_inset Formula $\sigma\equiv0$
+\end_inset
+
+则
+\begin_inset Formula $ds/s=\mu dt$
+\end_inset
+
+ 
+\begin_inset Formula $S_{t}=S_{0}e^{\mu t}(t>0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2)若
+\begin_inset Formula $\mu\not\not!=r$
+\end_inset
+
+则存在套利，
+\begin_inset Formula $\therefore$
+\end_inset
+
+
+\begin_inset Formula $\sigma=0$
+\end_inset
+
+的情形是平凡的。
+\end_layout
+
+\begin_layout Standard
+只需考虑
+\begin_inset Formula $\sigma>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+实证的时候，即
+\begin_inset Formula $[x]$
+\end_inset
+
+为x的量纲。
+\end_layout
+
+\begin_layout Standard
+为1时，称为x无量纲
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $[ds/s]=1,[\mu dt]=[\sigma dB]=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $[s]=$
+\end_inset
+
+货币，
+\begin_inset Formula $\text{货币}/\text{单位 }$
+\end_inset
+
+；
+\begin_inset Formula $[\mu]=1/\text{时间}$
+\end_inset
+
+；
+\begin_inset Formula $[\sigma]=1/[B]=1/\sqrt{\text{时间}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1年=250个交易日，S取样单位为每个交易日，要求将其转换为以年为单位的数据。
+\begin_inset Formula $dS/S=N\mu dt/N+\sigma\sqrt{N}dB/\sqrt{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+连续股息派发情况下的GBM，假设S连续股息派发，拍法律为q》0构造投资组合，
+\begin_inset Formula $\Pi(t)=e^{-q(T-t)}S(t)$
+\end_inset
+
+易知，
+\begin_inset Formula $\pi$
+\end_inset
+
+无股息派发（为什么？）
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $d\pi/\pi=\mu dt+\sigma dB,d\pi=d(e^{-q(T-t)}S(t))=qe^{-q(T-t)}S(t)dt+e^{-1(T-t)}dS(t)+d(e^{-q(T-t)})dS$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+自融资
+\end_layout
+
+\end_body
+\end_document

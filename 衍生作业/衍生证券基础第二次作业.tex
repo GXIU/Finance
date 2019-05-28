@@ -1,0 +1,98 @@
+%% LyX 2.2.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass{ctexart}
+\usepackage{amsmath}
+\usepackage{fontspec}
+\setmainfont[Mapping=tex-text]{STSong}
+\setsansfont[Mapping=tex-text]{STHeiti}
+\setmonofont{STFangsong}
+\usepackage{xunicode}
+\begin{document}
+
+\title{衍生证券基础第二次作业}
+
+\author{1400010647 修格致}
+
+\date{2017-2-27}
+\maketitle
+
+\subsubsection{假设：$S$在$t_{d}\in(t,T)$派发股息$D\text{>0}$，其他时间无股息派发。证明$For(S,t,T)=S(t)e^{r(T-t)}-De^{r(T-t_{d})}$.}
+
+证明：
+
+由于无套利原则，远期合约的价格应该满足：这个投资组合在$T$时刻的价值为$S(T)$.
+
+在$(t_{d},T)$之中，买方只持有期权一种资产，所以$t_{d}$时刻的价值应该为$S(t_{d}^{+})-For(S,t,T)e^{-r(T-t_{d})}$.
+$t_{d}^{-}$时刻，由于$S(t_{d}^{-})=S(t_{d}^{+})+D$，期权的价值等于股息与$S(t_{d}^{+})$之和，即$f=S(t_{d}^{-})-For(S,t,T)e^{-r(T-t_{d})}+D$.
+此时期权的等价资产为一支股票和一笔现金。对资产的时间价值进行换算，$t_{d}$时刻$S(t_{d}^{-})$的那只股票在$T$时刻价格为$S(T)$；$D$的现金贴现到$T$时刻价值为$De^{r(T-t_{d})}$.\\
+即$For(S,t,T)$加上一笔现金$De^{r(T-t_{d})}$等价于最初时刻的一支股票的价值$S(t)$. 证毕
+
+\subsubsection{$S$在$[t,T]$连续派发股息，股息派发率为$q$。证明$For(S,t,T)=S(t)e^{(r-q)(T-t)}$.}
+
+证明：
+
+$t$时刻$e^{-q(A)}$单位的资产，在$t+A$时刻价值为$S(t+A)$。所以此远期合约的价格为$T$时刻上，$t$时刻$e^{q(A)}$单位资产的价值。即$t+A=T,A=T-t$。$T$时刻会有$e^{-qA}e^{qA}=1$只价格为$For(S,t,T)$的股票，相当于$e^{-q(T-t)}$只价格为$e^{q(T-t)}For(S,t,T)$的股票$\Pi$。即$For(S,t,T)=e^{-q(T-t)}For(\Pi,t,T)=e^{-q(T-t)}S(t)e^{r(T-t)}$
+得证
+
+\subsubsection{假设$S$无股息派发，$A$在$t$时向$B$买入一张远期合约，价格为$For(S,t,T)$. 在$t$时，双方无现金流，$t_{1}$时，$A$打算转手给$X$，求此时$X$要付给$A$多少现金？}
+
+　　设$For(S,t,T)=S(t)e^{r(T-t)}$。
+
+$t_{1}$时刻期权的价格为$For(S,t_{1},T)=S(t_{1})e^{r(T-t_{1})}$
+
+所以付出的金钱为$[For(S,t_{1},T)-For(S,t,T)]e^{-r(T-t_{1})}=S(t_{1})-S(t)e^{r(t_{1}-t)}=S(t_{1})-For(S,t,T)e^{-r(T-t_{1})}$
+
+\subsubsection{题目}
+
+解：设$t_{n}=T-2n\text{(minutes)}$
+
+如题设定价，更换到期日，$For_{n}(S,t,T)=S(t)e^{r(T-t_{n})}$. 新的价格应为$For'(S,t,T)=S(t)[\sum_{i=1}^{60}e^{r(T-t_{n})}]/60$。则$t\ll T$时显然有所证成立。
+
+几何平均：
+\begin{align*}
+For''(S,t,T) & =S(t)[\prod_{i=1}^{60}e^{r(T-t_{n})}]^{1/60}=S(t)[e^{r(60T-\sum_{i=1}^{60}t_{n})}]^{1/60}\\
+ & =S(t)e^{rT}(\prod_{i=1}^{60}e^{-rt_{n}})^{1/60}\text{\ensuremath{\le}}S(t)e^{rT}(\frac{1}{60}\sum_{i=1}^{60}e^{-t_{n}})=For'(S,t,T)
+\end{align*}
+
+算数平均比较大
+
+\subsubsection{(1)}
+
+\subparagraph{$For(S,t,T)=S(t)e^{r(T-t)}$}
+
+令$t_{n}=T,t_{0}=t$, 有
+
+\subparagraph{$\Pi(t)=\sum_{i=0}^{n}\{e^{r(T-t_{i+1})}[Fut(S,t_{i+1},T)-Fut(S,t_{i},T)]\}$}
+
+$=e^{rT}\sum_{i=0}^{n}e^{-rt_{i+1}}[Fut(S,t_{i+1},T)-Fut(S,t_{i},T)]$
+
+$=\sum_{i=0}^{n-1}Fut(S,t_{i},T)[e^{rT-rt_{i}}-e^{rT-rt_{i+1}}]+Fut(S,t_{n},T)$
+
+$=(e^{r}-1)\{\sum_{i=0}^{n-1}Fut(S,t_{i},T)[e^{rT-rt_{i+1}}]\}+S(T)=0$
+
+如果我们在 $t$时再卖出 一张远期合约, 其价格为 $For(S,t,T)$. 远期合约在卖出时也没有费用, 但到$T$ 时,
+远期合约要求我们必须支付$S(T)-For(S,t,T)$给远期合约的买方. 所以在$t$ 时, 买入一张期货合约同时卖出一张远期合约并且一直持有这两个合约到$T$
+, 我们获得现金
+\[
+S(T)-Fut(S,t,T)-(S(T)-For(S,t,T))=For(S,t,T)-Fut(S,t,T)
+\]
+. 上式等号右面两项在$t$是已知的. 由无套利假定，并对$n$进行归纳假设可证得
+
+$For(S,t,T)=Fut(S,t,T).$
+
+\subparagraph{(2)如果股息连续派发 ，则等式不会成立。}
+
+假设成立，在$t$时刻卖出一张远期合约，$t_{i}$时刻买入$e^{-r(T-t_{i+1})}$份期货合约，并在$t_{i+1}$卖出。
+\begin{enumerate}
+\item 若$[t_{i},t_{i+1}]$上无股息派发，此交易收获现金$e^{-r(T-t_{i+1})}(Fut(S,t_{i+1},T)-Fut(S,t,T))$
+\item 若有股息派发$D_{i}$：$e^{-r(T-t_{i+1})}(Fut(S,t_{i+1},T)-Fut(S,t,T)+D_{i})$.
+所以时刻$T$的:
+
+\paragraph{期货合约总现金为$\sum_{i=0}^{n-1}\delta_{i}D_{i}-Fut(S,t,T)+S(T)$}
+
+\paragraph{远期合约收获现金$For(S,t,T)-S(T)$. }
+
+\paragraph{总资产为$\Sigma_{i=0}^{n-1}\delta_{i}b_{i}>0$, 存在套利风险。所以不能如此定价。即等式不成立。}
+\end{enumerate}
+
+\end{document}

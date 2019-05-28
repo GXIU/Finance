@@ -1,0 +1,506 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\use_default_options true
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Songti SC"
+\font_sans "default" "Heiti SC"
+\font_typewriter "default" "FangSong"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 2cm
+\headsep 2cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+衍生证券基础第五次作业
+\end_layout
+
+\begin_layout Author
+1400010647 修格致
+\end_layout
+
+\begin_layout Subparagraph
+1 假设：
+\begin_inset Formula $S$
+\end_inset
+
+连续股息派发，股息派发率为
+\begin_inset Formula $q>0$
+\end_inset
+
+。分别证明执行边界
+\begin_inset Formula $S_{*}(\mathbb{C},\tau,E)$
+\end_inset
+
+和
+\begin_inset Formula $S_{*}(\mathbb{P},\tau,E)$
+\end_inset
+
+关于
+\begin_inset Formula $\tau$
+\end_inset
+
+连续。
+\end_layout
+
+\begin_layout Standard
+由于
+\begin_inset Formula $S_{*}(\mathbb{C},\tau,E)$
+\end_inset
+
+与
+\begin_inset Formula $S(t)$
+\end_inset
+
+无关，即证明对于任意股价曲线，都有执行边界
+\begin_inset Formula $S_{*}(\mathbb{C},\tau,E)$
+\end_inset
+
+和
+\begin_inset Formula $S_{*}(\mathbb{P},\tau,E)$
+\end_inset
+
+关于
+\begin_inset Formula $\tau$
+\end_inset
+
+连续。不妨取
+\begin_inset Formula $\forall\epsilon>0,|S(t_{0})-E|<\epsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于看涨期权：如果
+\begin_inset Formula $S_{*}(\mathbb{C},\tau,E)$
+\end_inset
+
+在
+\begin_inset Formula $t_{0}\in(t,T)$
+\end_inset
+
+不连续。则在
+\begin_inset Formula $t_{0}^{-}$
+\end_inset
+
+时刻
+\begin_inset Formula $\exists\omega$
+\end_inset
+
+，
+\begin_inset Formula $S_{t_{0}^{-}}(\omega)-E<0,S_{t_{0}^{+}}(\omega)-E>0$
+\end_inset
+
+.
+ 则有
+\begin_inset Formula $|S_{*}(\mathbb{C},t_{0},E)-S_{t_{0}^{+}}(\omega)|<\epsilon/2$
+\end_inset
+
+。我们由股价的连续性，可以证得
+\begin_inset Formula $S_{*}(\mathbb{C},\tau,E)$
+\end_inset
+
+连续。
+\end_layout
+
+\begin_layout Standard
+同理可证看跌期权的
+\begin_inset Formula $S_{*}(\mathbb{P},\tau,E)$
+\end_inset
+
+是连续的。
+\end_layout
+
+\begin_layout Subparagraph
+2 假设：
+\begin_inset Formula $S$
+\end_inset
+
+连续股息派发，股息派发率为
+\begin_inset Formula $q$
+\end_inset
+
+。证明1）
+\begin_inset Formula $S_{*}(\mathbb{C},\tau,E)$
+\end_inset
+
+随
+\begin_inset Formula $\tau$
+\end_inset
+
+不减。 2）
+\begin_inset Formula $S_{*}(\mathbb{P},\tau,E)$
+\end_inset
+
+随
+\begin_inset Formula $\tau$
+\end_inset
+
+不增。
+\end_layout
+
+\begin_layout Standard
+1）若存在
+\begin_inset Formula $t_{0}<t_{1}$
+\end_inset
+
+，
+\begin_inset Formula $S_{*}(\mathbb{C},t_{0},E)>S_{*}(\mathbb{C},t_{1},E)$
+\end_inset
+
+.则此人到
+\begin_inset Formula $t_{1}^{+}$
+\end_inset
+
+仍不执行的条件是
+\begin_inset Formula $\forall t\text{≤}t_{1}^{+},S(t)<S_{*}(\mathbb{C},t,E)$
+\end_inset
+
+.
+ 则我们于
+\begin_inset Formula $t$
+\end_inset
+
+买一份
+\begin_inset Formula $\mathbb{C}_{1}(s,t,E,T),$
+\end_inset
+
+卖一份
+\begin_inset Formula $\mathbb{C}_{2}(s,t,E,T)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2）同上
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{P}(S,\tau,E)$
+\end_inset
+
+不减且
+\begin_inset Formula $\mathbb{P}(S,\tau,E)>E-S(t)\Leftrightarrow S(t)>S_{*}(\mathbb{P},\tau,E)$
+\end_inset
+
+.
+ 故对于
+\begin_inset Formula $\tau_{2}>\tau_{1}>0,S_{0}$
+\end_inset
+
+给定，只需要
+\begin_inset Formula $\mathbb{P}(S,\tau,E)>E-S$
+\end_inset
+
+，即
+\begin_inset Formula $S_{0}>S_{*}(\mathbb{P},\tau,E)$
+\end_inset
+
+就有
+\begin_inset Formula $\mathbb{P}(s,\tau_{2},E)\geq\mathbb{P}(s,\tau_{1},E)>E-S_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+故
+\begin_inset Formula $S_{*}(\mathbb{P},\tau_{2},E)\leq S_{*}(\mathbb{P},\tau_{1},E)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+3 
+\end_layout
+
+\begin_layout Standard
+相等，否则，设
+\begin_inset Formula $\widetilde{\text{\Pi(t)}}>\Pi(t)$
+\end_inset
+
+则卖空
+\begin_inset Formula $\widetilde{\text{\Pi(t)}}$
+\end_inset
+
+买入
+\begin_inset Formula $\Pi(t)$
+\end_inset
+
+。将剩余的钱存入银行。在
+\begin_inset Formula $T$
+\end_inset
+
+时刻，两者都到期，分析
+\begin_inset Formula $\widetilde{\text{\Pi(T)}}$
+\end_inset
+
+的执行条件。以相同的选择执行
+\begin_inset Formula $\Pi(T)$
+\end_inset
+
+。得到一定的股票或者什么也没得到。花
+\begin_inset Formula $0$
+\end_inset
+
+赎回
+\begin_inset Formula $\widetilde{\Pi(T)}$
+\end_inset
+
+，得到同样的股票流。所以得到
+\series bold
+存款
+\series default
+套利。
+\end_layout
+
+\begin_layout Standard
+反之对于
+\begin_inset Formula $<$
+\end_inset
+
+依然成立。
+\end_layout
+
+\begin_layout Standard
+综上，相等。
+\end_layout
+
+\begin_layout Subparagraph
+4 
+\end_layout
+
+\begin_layout Standard
+1)
+\begin_inset Formula $\pi(t,c,E_{1},E_{2})=c_{1}-c_{2},$
+\end_inset
+
+到
+\begin_inset Formula $T$
+\end_inset
+
+时，收益为
+\begin_inset Formula $max(S(T)-E_{2},0)$
+\end_inset
+
+-
+\begin_inset Formula $max(S(T)-E_{1},0)+\pi(t,c,E_{1},E_{2})e^{r(T-t)}$
+\end_inset
+
+由于
+\begin_inset Formula $S(t)<S(T)$
+\end_inset
+
+,
+\begin_inset Formula $S(t)-E_{i}\geq C\geq0,\text{故\ensuremath{S(T)\geq E_{i}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可知
+\begin_inset Formula $T$
+\end_inset
+
+时收益为
+\begin_inset Formula $E_{1}-E_{2}+\pi e^{r(T-t)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以
+\begin_inset Formula $\pi(t,c,E_{1},E_{2})<\pi(T,c,E_{1},E_{2})\Leftrightarrow E_{1}-E_{2}>\pi(t,C,E_{1},E_{2})(1-e^{r(T-t)})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由于
+\begin_inset Formula $|\pi(t,c,E_{1},E_{2})|\text{≤}S(t)$
+\end_inset
+
+故
+\begin_inset Formula $E_{1}-E_{2}>S(t)(e^{r(T-t)}-1)$
+\end_inset
+
+即可
+\end_layout
+
+\begin_layout Standard
+2）类似的卖一份
+\begin_inset Formula $p_{1}$
+\end_inset
+
+买一份
+\begin_inset Formula $p_{2}$
+\end_inset
+
+即可。
+\end_layout
+
+\begin_layout Subparagraph
+5 
+\end_layout
+
+\begin_layout Standard
+1）由于布朗运动在任意的时刻
+\begin_inset Formula $t$
+\end_inset
+
+,
+\begin_inset Formula $B(s)(s<t)$
+\end_inset
+
+与
+\begin_inset Formula $B(y)-B(t)(y>t)$
+\end_inset
+
+相互独立，所以所证即为
+\begin_inset Formula $E|B(t)|=\sqrt{\frac{2}{\pi}}\sqrt{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(y)=\frac{1}{\sqrt{2\pi s}}e^{-\frac{1}{2s}y^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\therefore E|B(t)|=2\int_{0}^{+\infty}yf(y)dy=2\int_{0}^{+\infty}\frac{y}{\sqrt{2\pi t}}e^{-\frac{1}{2t}y^{2}}dy=\sqrt{\frac{2}{\pi t}}\times t=\sqrt{\frac{2t}{\pi}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以将
+\begin_inset Formula $B(t)$
+\end_inset
+
+换成
+\begin_inset Formula $B(t)-B(s)$
+\end_inset
+
+仍然是成立的。证毕。
+\end_layout
+
+\begin_layout Standard
+2）.假设:
+\begin_inset Formula $0=t_{0}<t_{1}<···<t_{n}=1$
+\end_inset
+
+为[0,1]区间上的一个分划:.令: 
+\begin_inset Formula $f(n):=\sum_{i=0}^{n-1}E(|B(t_{i+1}-B(t_{i})|)$
+\end_inset
+
+ 当
+\begin_inset Formula $n→+∞$
+\end_inset
+
+并且 
+\begin_inset Formula $limmax_{i}(t_{i+1}−t_{i})=0$
+\end_inset
+
+时, 
+\begin_inset Formula $f(n)$
+\end_inset
+
+是否有界? 说明理由.
+ 
+\end_layout
+
+\begin_layout Standard
+由于
+\begin_inset Formula $\lim_{n\rightarrow\infty}max_{i}(t_{i+1}^{(n)}-t_{i}^{(n)})=0,\therefore\forall\epsilon>0,\exists N_{\epsilon},max_{i}(t_{i+1}^{(n)}-t_{i}^{(n)})<\epsilon\Rightarrow E(|B(t_{i+1}^{n})-B(t_{i}^{n})|)=\sqrt{\frac{2}{\pi}}\sqrt{t_{i+1}-t_{n}}>\sqrt{\frac{2}{\pi}\frac{1}{\epsilon}}(t_{i+1}-t_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\therefore f(n)=\sum_{i=0}^{n-1}E(|B(t_{i+1}-B(t_{i})|)=\sqrt{\frac{2}{\pi}}(\sum\sqrt{t_{i+1}-t_{i}})>\sqrt{\frac{2}{\pi\epsilon}}\therefore f(n)$
+\end_inset
+
+无上界
+\end_layout
+
+\end_body
+\end_document

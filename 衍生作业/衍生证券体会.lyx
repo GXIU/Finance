@@ -1,0 +1,985 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\use_default_options true
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "STSong"
+\font_sans "default" "STHeiti"
+\font_typewriter "default" "STFangsong"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+衍生证券基础
+\end_layout
+
+\begin_layout Author
+\begin_inset Formula $\text{\mathcal{GEORGE}}$
+\end_inset
+
+ 整理
+\end_layout
+
+\begin_layout Part
+Preliminaries
+\end_layout
+
+\begin_layout Section
+名词
+\end_layout
+
+\begin_layout Subsection
+股票相关
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\noindent
+\align left
+股票 
+\begin_inset Formula $S(t)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\noindent
+\align left
+持股数（筹码、仓位） 持仓成本 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\noindent
+\align left
+平仓、现金为王 全部卖出
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\noindent
+\align left
+卖空 市场允许我
+\series bold
+向股票持有者借股票并立即卖掉。
+\series default
+日后归还
+\series bold
+股票
+\series default
+。
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\noindent
+\align left
+裸卖空 不借股票；不参与上市公司决策投票；归还时真的归还股票（大量裸卖空可能导致市场波动）
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\noindent
+\align left
+股息派发 分
+\series bold
+离散
+\series default
+和
+\series bold
+连续
+\series default
+。上市公司将盈利以现金的形式发放给股民／股东。
+\begin_inset Formula $S(t_{d}^{-})=S(t_{d}^{+})+D$
+\end_inset
+
+ （意义或许是在于，可以让股东不卖出股票就能赚钱。）
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+股息派发率 资产回报
+\begin_inset Formula $S(t+\delta t)+qS(t+\delta t)\delta t$
+\end_inset
+
+中的
+\begin_inset Formula $q$
+\end_inset
+
+，这里要求
+\begin_inset Formula $q$
+\end_inset
+
+是常数（循环地再次买入：得到的回报为
+\begin_inset Formula $\lim_{n\rightarrow\infty}\Pi_{i=1}^{n}(1+q\delta s_{n})=e^{qA}$
+\end_inset
+
+股，
+\begin_inset Formula $S(t+A)e^{qA}$
+\end_inset
+
+元）
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\noindent
+\align left
+合并、分股 股票
+\end_layout
+
+\begin_layout Subsection
+期货相关
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $For(S,t,T)$
+\end_inset
+
+ 从
+\begin_inset Formula $t$
+\end_inset
+
+到
+\begin_inset Formula $T$
+\end_inset
+
+时刻，远期合约的
+\series bold
+价格
+\series default
+（交割价格）
+\end_layout
+
+\begin_layout Section
+基本假定
+\end_layout
+
+\begin_layout Subsection
+股票部分
+\end_layout
+
+\begin_layout Enumerate
+不存在任何形式与交易相关的费用，如手续费、佣金、税收等；
+\end_layout
+
+\begin_layout Enumerate
+无买卖差价；
+\end_layout
+
+\begin_layout Enumerate
+单比交易证券数量无限可分；
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S(t)$
+\end_inset
+
+随时间连续变换，但不一定可微。
+\end_layout
+
+\begin_layout Enumerate
+银行
+\series bold
+无风险利率
+\series default
+的存在：
+\begin_inset Formula $M(t+dt)=M(t)+\frac{dM}{dt}dt+...\Rightarrow r:=\frac{dM(t)}{M(t)dt}$
+\end_inset
+
+.
+ 假设为非负常数(涉及的讨论都在一年以内)。即有
+\begin_inset Formula $M(t+\alpha)=M(t)e^{ra}\geq M(t),\forall\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+交易可以随时进行，购买任意数量证券，证券价格不会
+\series bold
+因此
+\series default
+改变；
+\end_layout
+
+\begin_layout Enumerate
+无违约行为
+\end_layout
+
+\begin_layout Enumerate
+允许无限制卖空（无押金、保证金）
+\end_layout
+
+\begin_layout Enumerate
+不存在无风险套利机会
+\end_layout
+
+\begin_layout Enumerate
+投资者或投资者之间不存在
+\series bold
+信息优势
+\end_layout
+
+\begin_layout Enumerate
+投资者、投机者：利益最大化驱使
+\end_layout
+
+\begin_layout Enumerate
+投资者必须没有道德？
+\end_layout
+
+\begin_layout Enumerate
+我国市场：T+1（期货市场是即时交易的）
+\end_layout
+
+\begin_layout Paragraph*
+简单推论：卖空操作的合理性；策略公开后会失效；
+\end_layout
+
+\begin_layout Subsection
+远期与期货部分
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $[0,T)$
+\end_inset
+
+内，双方没有现金流。
+\end_layout
+
+\begin_layout Enumerate
+买卖双方可以把合约转手给
+\series bold
+第三方
+\series default
+。此时可能产生现金流。
+\end_layout
+
+\begin_layout Part
+金融市场
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+\text{场外交易市场} & \text{又称柜台交易市场}\\
+\text{交易所} & T+1\text{，有卖空门槛}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+问题：对于个股实行卖空机制，那么
+\begin_inset Formula $T+1$
+\end_inset
+
+是否还能有效实行？
+\end_layout
+
+\begin_layout Section
+远期合约、期货
+\end_layout
+
+\begin_layout Subsection
+期货合约的要素
+\end_layout
+
+\begin_layout Subparagraph
+合约双方、到期日
+\begin_inset Formula $T$
+\end_inset
+
+、约定价格
+\begin_inset Formula $E$
+\end_inset
+
+（以此价格买入产品）
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\text{\implies}$
+\end_inset
+
+实际意义可以只看现金流：
+\begin_inset Formula $t$
+\end_inset
+
+时
+\begin_inset Formula $A$
+\end_inset
+
+给
+\begin_inset Formula $Bf$
+\end_inset
+
+元，
+\begin_inset Formula $T$
+\end_inset
+
+时刻
+\begin_inset Formula $B$
+\end_inset
+
+给
+\begin_inset Formula $A$
+\end_inset
+
+
+\begin_inset Formula $S(T)-g$
+\end_inset
+
+元。对于后者来说，
+\begin_inset Formula $t$
+\end_inset
+
+时刻的价值为
+\begin_inset Formula $S(t)-ge^{-r(T-t)}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+　　如果它比
+\begin_inset Formula $f$
+\end_inset
+
+大，则
+\begin_inset Formula $A$
+\end_inset
+
+比较合算，替代
+\begin_inset Formula $A$
+\end_inset
+
+有套利的策略；反之，如果它比
+\begin_inset Formula $f$
+\end_inset
+
+小，则
+\begin_inset Formula $B$
+\end_inset
+
+比较合算，代替
+\begin_inset Formula $B$
+\end_inset
+
+有套利的策略。
+\end_layout
+
+\begin_layout Standard
+远期合约的定义：签约
+\begin_inset Formula $t$
+\end_inset
+
+时双方没有现金流，
+\begin_inset Formula $f=0$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Subsubsection
+严格数学表述：
+\end_layout
+
+\begin_layout Subparagraph
+\begin_inset Formula $A$
+\end_inset
+
+想在
+\begin_inset Formula $T$
+\end_inset
+
+时刻以价格
+\begin_inset Formula $g$
+\end_inset
+
+购买
+\begin_inset Formula $1$
+\end_inset
+
+份
+\begin_inset Formula $S$
+\end_inset
+
+，并且在
+\begin_inset Formula $t$
+\end_inset
+
+时，
+\begin_inset Formula $A$
+\end_inset
+
+付给
+\begin_inset Formula $B$
+\end_inset
+
+
+\begin_inset Formula $f$
+\end_inset
+
+元现金。如果
+\begin_inset Formula $T$
+\end_inset
+
+时，
+\begin_inset Formula $S(t)>g$
+\end_inset
+
+那么
+\begin_inset Formula $A$
+\end_inset
+
+以价格
+\begin_inset Formula $g$
+\end_inset
+
+买一份
+\begin_inset Formula $S$
+\end_inset
+
+（相当于
+\begin_inset Formula $B$
+\end_inset
+
+先给
+\begin_inset Formula $A$
+\end_inset
+
+现金
+\begin_inset Formula $S(T)-g$
+\end_inset
+
+，这样
+\begin_inset Formula $A$
+\end_inset
+
+就以
+\begin_inset Formula $S(T)$
+\end_inset
+
+买入
+\begin_inset Formula $1$
+\end_inset
+
+份
+\begin_inset Formula $S$
+\end_inset
+
+了）。
+\end_layout
+
+\begin_layout Subsubsection
+合约合理的意思：不存在无风险套利。
+\end_layout
+
+\begin_layout Subsubsection
+数学推导
+\end_layout
+
+\begin_layout Subsubsection
+远期合约的价格和价值
+\end_layout
+
+\begin_layout Subparagraph
+远期合约的定价：
+\begin_inset Formula $For(S,t,T)=S(t)e^{r(T-t)}$
+\end_inset
+
+（价
+\bar under
+格
+\bar default
+）
+\end_layout
+
+\begin_layout Subparagraph
+合约的价值（交易价值）：
+\end_layout
+
+\begin_layout Itemize
+到期时刻
+\begin_inset Formula $T$
+\end_inset
+
+：满足此价格时，合约价值为
+\begin_inset Formula $0$
+\end_inset
+
+。（有承诺，
+\begin_inset Formula $T$
+\end_inset
+
+时刻卖方付给买方
+\begin_inset Formula $S(T)-For(S,t,T)$
+\end_inset
+
+元）
+\end_layout
+
+\begin_layout Itemize
+初始时刻
+\begin_inset Formula $t$
+\end_inset
+
+：由期权定价公式，
+\begin_inset Formula $f=S(t)-For(S,t,T)e^{-r(T-t)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+未到期时刻
+\begin_inset Formula $t'$
+\end_inset
+
+：不妨设任意时刻开始，则由定价公式，
+\begin_inset Formula $t'$
+\end_inset
+
+时价格为
+\begin_inset Formula $S(t')-For(S,t,T)e^{-r(T-t')}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+意义是买合约的人给卖方这些钱，得到一支股票，到期给
+\begin_inset Formula $A$
+\end_inset
+
+
+\begin_inset Formula $S(T)-For(S,t,T)$
+\end_inset
+
+元，卖出股票得到
+\begin_inset Formula $S(T)$
+\end_inset
+
+，剩下
+\begin_inset Formula $For(S,t,T)$
+\end_inset
+
+。则合约的
+\series bold
+价值
+\series default
+就是“在
+\begin_inset Formula $t'$
+\end_inset
+
+时刻付出
+\series bold
+\bar under
+现金
+\series default
+\bar default
+换来的
+\bar under
+股票和期权
+\bar default
+，在
+\begin_inset Formula $T$
+\end_inset
+
+时刻回报的
+\bar under
+现金
+\bar default
+”。
+\end_layout
+
+\end_deeper
+\begin_layout Subparagraph
+按照定义
+\begin_inset Formula $f=0=S(t)-ge^{-r(T-t)},g=S(t)e^{r(T-t)}$
+\end_inset
+
+为远期合约的“价格”
+\begin_inset Formula $For(S,t,T)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+远期合约的
+\series bold
+价值
+\series default
+在两个时刻等于0: 
+\begin_inset Formula $t,T$
+\end_inset
+
+.此时买卖不需要花钱。
+\end_layout
+
+\begin_layout Subsubsection
+派发股息的情况
+\end_layout
+
+\begin_layout Subparagraph
+\begin_inset Formula $t_{d}$
+\end_inset
+
+时刻派发股息
+\begin_inset Formula $D$
+\end_inset
+
+，则
+\begin_inset Formula $S(t_{d}^{-})=S(t_{d}^{+})+D$
+\end_inset
+
+。将这个过程等价于如下过程：
+\end_layout
+
+\begin_layout Standard
+　
+\begin_inset Formula $t$
+\end_inset
+
+时刻，买一支股票，并且向银行借款
+\begin_inset Formula $De^{-r(t_{d}-t)}$
+\end_inset
+
+则整个过程连续，即等价于一支无股息派发的股票
+\begin_inset Formula $\text{\Pi}$
+\end_inset
+
+。它对应的期权定价为：
+\begin_inset Formula $For(\text{\Pi},t,T)=\Pi(t)e^{r(T-t)}=S(t)e^{r(T-t)}-De^{r(T-t_{d})}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+期货合约
+\end_layout
+
+\begin_layout Subsubsection
+要素
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+交易地点 交易所
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+交易者 买方、卖方
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+时间要素 设收盘时刻为
+\begin_inset Formula $t_{n}^{-}$
+\end_inset
+
+,次日开盘时刻为
+\begin_inset Formula $t_{n}^{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+交易时间 关于
+\begin_inset Formula $t$
+\end_inset
+
+连续，此时无现金流，而是在收盘之后
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+价格 
+\begin_inset Formula $t$
+\end_inset
+
+时刻期货价格为
+\begin_inset Formula $Fut(S,t,T)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+保证金 分类：开户、交易、维持、锁仓、可用、追加等
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+合约大小 最小：1张
+\end_layout
+
+\begin_layout Standard
+收盘后对买卖双方结算，查看账户保证金是否充足
+\end_layout
+
+\begin_layout Subsubsection
+过程
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $t\in(t_{i},t_{i+1}^{-})\text{}$
+\end_inset
+
+买入
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(t_{i},t_{i+1}^{-})\begin{cases}
+\text{卖出} & \text{}\\
+\text{不卖出} & t_{i+1}^{+}\text{时}\text{交易所把你的持有费用调整为}Fut(S,t_{i+1},T)\text{。次日开盘给你一张买方合约}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+期货价格
+\end_layout
+
+\begin_layout Standard
+期货合约只规定到期时期货价格满足：
+\begin_inset Formula $Fut(S,T,T)=S(T)$
+\end_inset
+
+即可。
+\end_layout
+
+\begin_layout Section
+市场
+\end_layout
+
+\begin_layout Subsection
+观念
+\end_layout
+
+\begin_layout Enumerate
+市场的有效性
+\end_layout
+
+\begin_layout Enumerate
+坐庄
+\end_layout
+
+\begin_layout Subsubsection
+标的
+\end_layout
+
+\begin_layout Subsubsection
+欧式期权
+\end_layout
+
+\begin_layout Enumerate
+标的
+\begin_inset Formula $S$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+各个时间的规范
+\end_layout
+
+\begin_layout Enumerate
+看涨、看跌
+\end_layout
+
+\begin_layout Subsubsection
+美式期权
+\end_layout
+
+\begin_layout Subsubsection
+不等式
+\end_layout
+
+\begin_layout Subsubsection
+内蕴值，期权的时间价值
+\begin_inset Formula $TV$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S(t)\text{≥}\mathbb{C}(S,t,E,T)\text{≥}c(S,t,E,T)\text{≥0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+计价单位的改变（由货币改变为股数）
+\end_layout
+
+\begin_layout Standard
+假设
+\begin_inset Formula $S$
+\end_inset
+
+连续股息派发（保证可以贴现运算，或通胀、折价），
+\begin_inset Formula $q>0$
+\end_inset
+
+，
+\begin_inset Formula $S$
+\end_inset
+
+的计价单位为人民币，则t时，价格为
+\begin_inset Formula $E$
+\end_inset
+
+的产品价值为
+\begin_inset Formula $E/S(t)$
+\end_inset
+
+“股”（此两个计价单位可以互换）。
+\end_layout
+
+\begin_layout Standard
+定义一个
+\begin_inset Formula $c(\hat{S},S,T,E,T)=max(S(T)-E,0)=S(T)max(1-\frac{E}{S(T)},0)$
+\end_inset
+
+.给定两个时间，标的价格的计算就是到
+\begin_inset Formula $T$
+\end_inset
+
+时刻你愿意出多少钱买这个东西。最后一个等号后面的意义：将 
+\begin_inset Formula $E/S(T)$
+\end_inset
+
+股换 1 股 S, 或什么也不做.
+ 
+\end_layout
+
+\begin_layout Standard
+这是一只欧式看跌期权的 Terminal payoff（开始花1元买一份期权，最后别人给你
+\begin_inset Formula $\frac{E}{S(T)}$
+\end_inset
+
+买一只股票或者什么也不做）, 其
+\bar under
+计价单位
+\bar default
+是
+\bar under
+
+\begin_inset Formula $S$
+\end_inset
+
+
+\bar default
+ 的股数, 敲定价为 1, 
+\begin_inset Formula $E/S(T)$
+\end_inset
+
+ 就可看成为新的股票在 T 时的价格（把价格跟数量互换了一下）.
+\begin_inset Formula $c(\hat{S},S,T,E,T)=S(t)p(\hat{\frac{E}{S}},\frac{E}{S},t,1,T)$
+\end_inset
+
+右边的意义为 
+\begin_inset Formula $(E/S(t))S(t)p(\hat{\frac{E}{S}},\frac{E}{S},t,1,T)$
+\end_inset
+
+即“
+\begin_inset Formula $t$
+\end_inset
+
+时刻价格为‘
+\begin_inset Formula $E/S(t)$
+\end_inset
+
+股’的
+\begin_inset Formula $S(t)p(\hat{\frac{E}{S}},\frac{E}{S},t,1,T)$
+\end_inset
+
+
+\bar under
+只
+\bar default
+新的股票”
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,406 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+衍生证券基础第一次作业
+\end_layout
+
+\begin_layout Author
+修格致 1400010647
+\end_layout
+
+\begin_layout Standard
+1、对于卖空的担心是多余的。
+\end_layout
+
+\begin_layout Standard
+借股票期间，卖空者会补偿原持有者以红利。这个部分会一直由卖空者转给原持有者。实际上减小了股价下跌的风险。
+\end_layout
+
+\begin_layout Standard
+设最初时股价是
+\begin_inset Formula $P(t)$
+\end_inset
+
+，被借者不想抛出股票，说明他觉得股价有可能上涨，即存在
+\begin_inset Formula $t_{1}$
+\end_inset
+
+，
+\begin_inset Formula $P(t_{1})>P(t$
+\end_inset
+
+)。想抛出的时刻，设为
+\begin_inset Formula $t_{2}$
+\end_inset
+
+ ，则必有
+\begin_inset Formula $P(t_{2})<P(t_{1})$
+\end_inset
+
+。此时被借者获得的红利是
+\begin_inset Formula $M_{tt_{2}}$
+\end_inset
+
+ ，卖股票的净收益为
+\begin_inset Formula $N(P(t_{2})-P(t))$
+\end_inset
+
+。此时面临的风险是:两者之和小于
+\begin_inset Formula $0$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+如果借出股票，只要借股票者不归还股票，期间的红利就会支付给被借者。设归还的时刻为
+\begin_inset Formula $t_{3}$
+\end_inset
+
+.则红利
+\begin_inset Formula $M_{tt_{3}}>M_{tt_{2}}$
+\end_inset
+
+.
+ 如果第1种情况下，卖股票过程会亏损，则长期来看，被借者并不需要承担这部分风险，只要
+\begin_inset Formula $P(t_{2})<P(t)$
+\end_inset
+
+，借股票者“不赎回股票，归还借出者”就是有利的。在借股票者认为的股价最低点时买回股票归还被借者时，设为
+\begin_inset Formula $t_{4}$
+\end_inset
+
+.
+ 则任意
+\begin_inset Formula $t_{5}>t_{4}$
+\end_inset
+
+, 由股价的连续性，有
+\begin_inset Formula $P(t_{5})\text{≥}P(t_{4})$
+\end_inset
+
+.
+ 此时被借者可以避免承受最大的损失，并且同时享受
+\begin_inset Formula $M_{tt_{3}}$
+\end_inset
+
+的红利。即如果股票价值下滑明显，存在一种情况，对卖空者和原投资者都是相对有利的：卖空者变现最多，原持有者收获了红利，损失风险变小。
+\end_layout
+
+\begin_layout Standard
+2、设交易策略等价为以价格
+\begin_inset Formula $S(t)$
+\end_inset
+
+买入1单位a，经过时间
+\begin_inset Formula $T-t$
+\end_inset
+
+以价格
+\begin_inset Formula $S(T)$
+\end_inset
+
+卖出1单位a，其中
+\begin_inset Formula $S(t)$
+\end_inset
+
+小于
+\begin_inset Formula $S(T)$
+\end_inset
+
+。 
+\end_layout
+
+\begin_layout Standard
+假设有获利的交易策略，则存在对某广义商品的价值低估，设价值为
+\begin_inset Formula $P$
+\end_inset
+
+,设此时价格为
+\begin_inset Formula $P_{0}$
+\end_inset
+
+ 。则第i个购买者在一笔购买进行之后，此商品的价格将会上升，他在下一时刻
+\begin_inset Formula $t_{1}$
+\end_inset
+
+ 有 
+\begin_inset Formula $P_{0}<P_{1}\text{≤}P$
+\end_inset
+
+ 。假设此时交易策略仍然有效，则下一时刻会有
+\begin_inset Formula $P_{0}<P_{1}<P_{2}\text{≤}P$
+\end_inset
+
+.
+ 由数学归纳法，有
+\begin_inset Formula $P_{0}<P_{1}<P_{2}<\cdots<P$
+\end_inset
+
+, 由数学分析中的定理：单调递增有上界的序列必有上确界，知，存在M，
+\begin_inset Formula $P_{n}\text{≤}M\text{≤}P$
+\end_inset
+
+ 对任意n成立，且对任意ε,存在Ν, 
+\begin_inset Formula $P_{N}>Μ-ε$
+\end_inset
+
+。所以不可能有无限个人因此获利。
+\end_layout
+
+\begin_layout Standard
+返回原题，如果存在一种策略可以以价格
+\begin_inset Formula $S(t)$
+\end_inset
+
+买入1单位a，经过时间
+\begin_inset Formula $T-t$
+\end_inset
+
+以价格
+\begin_inset Formula $S(T)$
+\end_inset
+
+卖出1单位a，其中
+\begin_inset Formula $S(t)$
+\end_inset
+
+小于
+\begin_inset Formula $S(T)$
+\end_inset
+
+。那么就存在一种一种策略以
+\begin_inset Formula $S^{1}(t)>S(t)$
+\end_inset
+
+买入，以
+\begin_inset Formula $S(T)$
+\end_inset
+
+卖出。归纳地有，只要
+\begin_inset Formula $S^{n}(t)<S(T)$
+\end_inset
+
+, 就存在第
+\begin_inset Formula $n+1$
+\end_inset
+
+种策略，以
+\begin_inset Formula $S^{n+1}\text{(t)>}S^{n}(t)$
+\end_inset
+
+买入，以
+\begin_inset Formula $S(T)$
+\end_inset
+
+价格卖出，这种策略会使第
+\begin_inset Formula $n$
+\end_inset
+
+种策略失效。得到
+\begin_inset Formula $\left\{ S^{n}(t)\right\} $
+\end_inset
+
+是一个单调上升的序列，并且有上界
+\begin_inset Formula $S(t)$
+\end_inset
+
+。只要某策略中，
+\begin_inset Formula $S^{i}(t)<S(T)$
+\end_inset
+
+，它总会失效。所以策略公开会失效。得证。
+\end_layout
+
+\begin_layout Standard
+3、假定：
+\begin_inset Formula $f<S(t)-ge^{r(T-t)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则存在
+\begin_inset Formula $\text{\epsilon}$
+\end_inset
+
+,
+\begin_inset Formula $f+\epsilon<S(t)-ge^{r(T-t)}$
+\end_inset
+
+套利策略如下：
+\end_layout
+
+\begin_layout Standard
+首先，卖空1股该期货对应的股票，得到
+\begin_inset Formula $S(t)$
+\end_inset
+
+元现金。接下来从B处以
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $f+\epsilon$
+\end_inset
+
+的价格购买1单位该期货。由于利益最大化原则，一定能找到卖家，使
+\begin_inset Formula $f+\epsilon$
+\end_inset
+
+的买家能买到该期权。
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+将剩余的
+\begin_inset Formula $S(t)-(f+\epsilon)$
+\end_inset
+
+存入银行。
+\end_layout
+
+\begin_layout Standard
+则到达时间
+\begin_inset Formula $T$
+\end_inset
+
+时，从银行中连本带利取出
+\begin_inset Formula $S(t)-(f+\epsilon)e^{r(T-t)}$
+\end_inset
+
+；给
+\begin_inset Formula $Bg$
+\end_inset
+
+元，得到一支股票；将股票还给卖空的股票持有者。此时手中剩余
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $S(t)-(f+\epsilon)e^{r(T-t)}-g$
+\end_inset
+
+元。提取
+\begin_inset Formula $e^{r(T-t)}$
+\end_inset
+
+我们发现，手中剩余
+\begin_inset Formula $e^{r(T-t)}(S(t)e^{-r(T-t)}-(f+\epsilon)-ge^{-r(T-t)})$
+\end_inset
+
+元由于
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $f+\epsilon<S(t)-ge^{r(T-t)}$
+\end_inset
+
+，所以手中剩余的金额为正数。即可以套利。
+\end_layout
+
+\end_body
+\end_document
